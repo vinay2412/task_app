@@ -1,0 +1,21 @@
+main {
+    text-align: center;
+}
+
+p {
+    margin-top: -7px;
+}
+
+.content {
+
+    text-align: justify;
+    text-justify: inter-word;
+    margin: 0% 35% 0% 35%;
+
+}
+
+@media only screen and (max-width: 600px) {
+    .content {
+        margin: 0px;
+    }
+}
