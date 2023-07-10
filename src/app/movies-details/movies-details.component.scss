@@ -1,42 +1,174 @@
-// main {
-//     text-align: center;
-// }
-
-p {
-    margin-top: -7px;
+body {
+  padding: 0;
+  color: #fff;
 }
 
-// .content {
+*::-webkit-scrollbar {
+  width: 2px;
+}
 
-//     text-align: justify;
-//     text-justify: inter-word;
-//     // margin: 0% 35% 0% 35%;
+*::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px transparent;
+  border-radius: 10px;
+}
 
-// }
+*::-webkit-scrollbar-thumb {
+  background: #2A3239;
+  border-radius: 10px;
+}
 
+.video-player {
+  position: relative;
+  margin-bottom: 5px;
+}
 
-* {
-    box-sizing: border-box;
+.video-player .poster {
+  width: 100%;
+}
+
+.video-player .play_btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.description {
+  padding: 0 10px;
+}
+
+.description h3,
+.description h6 {
+  text-align: center;
+}
+
+.description h6 {
+  color: #ffffffa9;
+}
+
+.action-button {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.action-button button {
+  width: 45%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.action-button img {
+  width: 12px;
+  margin-right: 5px;
+}
+
+.action-button .play {
+  background-image: linear-gradient(to bottom, #FF7732, #FF6212);
+  color: #000;
+}
+
+.actions {
+  display: flex;
+  margin: 10px 0;
+}
+
+.actions .action {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+  align-items: center;
+  text-align: center;
+}
+
+.actions .action img {
+  width: 25px;
+  margin-bottom: 10px;
+}
+
+.description p {
+  color: #ffffffd9;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.section-break {
+  width: 100%;
+  background-color: #ffffffd9;
+  height: 1px;
+  margin: 20px 0 10px 0;
+}
+
+.series {
+  padding: 0 10px;
+}
+
+.series .top {
+  display: flex;
+  align-items: center;
+}
+
+.series .top div {
+  margin: 10px 0;
+}
+
+.series .season {
+  border-right: 1px solid #ffffffd9;
+  padding: 0 15px 0 0;
+}
+
+.series .episode {
+  padding: 0 0 0 15px;
+}
+
+.series .item {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.series .item .image {
+  width: 140px;
+}
+
+.series .item .image img {
+  width: 140px;
+}
+
+.series .item p {
+  font-size: 10px;
+  color: #ffffffd9;
+  padding: 0 8px;
+  text-align: justify;
+}
+
+.series .item .download {
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 800px) {
+  .watch {
+      display: flex;
   }
-  
-  .column {
-    float: left;
-    width: 25.33%;
-    padding: 5px;
-  }
-  
-  /* Clearfix (clear floats) */
-  .row::after {
-    content: "";
-    clear: both;
-    display: table;
+
+  .left {
+      width: 60vw;
   }
 
-
-
-
-// @media only screen and (max-width: 600px) {
-//     .content {
-//         margin: 0px;
-//     }
-// }
+  .right {
+      width: 40vw;
+  }
+  .section-break{
+      display: none;
+  }
+  .series .item p {
+      font-size: 14px;
+  }
+}

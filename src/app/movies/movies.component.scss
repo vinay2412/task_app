@@ -1,7 +1,21 @@
-.movies-main-bg{
-    background-color: #2A3239;
-}
-.movies-main{
+.explore {
     display: flex;
-    margin-left: 12px;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.explore .content {
+    flex-grow: 1;
+    width: 50%;
+}
+
+.explore .content img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+@media (min-width: 800px) {
+    .explore .content{
+        width: 25%;
+    }
 }

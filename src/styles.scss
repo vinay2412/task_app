@@ -1,3 +1,185 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-@import '../node_modules/bootstrap/dist/css/bootstrap.css';
+body {
+    background-color: #1E1E1E;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 120px 0 40px 0;
+}
+
+.navbar {
+    background-color: #2A3239;
+    border-radius: 25px 25px 0px 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.navbar .top-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px 0 10px;
+}
+
+.navbar .slider-menu {
+    padding: 0 0 10px 0;
+}
+
+.navbar .slider-menu ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+}
+
+.navbar .slider-menu a {
+    color: #ffffffc2;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px 0;
+}
+
+.navbar .slider-menu a.active {
+    color: #fff;
+    position: relative;
+}
+
+.navbar .slider-menu a.active::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+}
+
+.slider {
+    display: flex;
+    overflow-x: scroll;
+    margin: 20px 0;
+    scroll-snap-type: x mandatory;
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+.slider img {
+    scroll-snap-align: start;
+    width: 90%;
+}
+
+.watch-content {
+    padding: 10px;
+}
+
+.watch-content .heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.watch-content h3 {
+    color: #FF7732;
+    font-size: 14px;
+}
+
+.watch-content .heading a {
+    color: #249AE3;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.watch-content .slideable {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    margin-top: 10px;
+}
+
+.slideable::-webkit-scrollbar {
+    height: 2px;
+}
+
+.slideable::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px transparent;
+    border-radius: 10px;
+}
+
+.slideable::-webkit-scrollbar-thumb {
+    background: #2A3239;
+    border-radius: 10px;
+}
+
+.watch-content .content {
+    scroll-snap-align: start;
+    margin: 0 5px 0 0;
+    position: relative;
+}
+
+.watch-content .content .icon {
+    position: absolute;
+    bottom: 12px;
+    right: 2px;
+    width: 30px;
+}
+
+.bottom-nav {
+    background-color: #242B32;
+    position: fixed;
+    width: 100%;
+    bottom: -1px;
+    height: 50px;
+}
+
+.bottom-nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0 30px;
+    justify-content: space-between;
+    align-items: center;
+    align-items: center;
+}
+
+.bottom-nav ul li {
+    transform: translateY(-5px);
+}
+
+.bottom-nav .shorts {
+    scale: 1.4;
+    transform: translateY(-15px);
+}
+.watch-content .content img{
+    border-radius: 10px;
+}
+@media (min-width: 800px) {
+
+    .slider img {
+        height: 60vh;
+        scroll-snap-align: center;
+    }
+
+    .watch-content .content {
+        width: 400px;
+    }
+
+    .watch-content .content img {
+        width: 100%;
+    }
+
+    .watch-content .content .icon {
+        bottom: 22px;
+        right: 14px;
+    }
+    .watch-content.square img{
+        aspect-ratio: 1/1;
+        object-fit: cover;
+    }
+}
