@@ -1,21 +1,42 @@
-main {
-    text-align: center;
-}
+// main {
+//     text-align: center;
+// }
 
 p {
     margin-top: -7px;
 }
 
-.content {
+// .content {
 
-    text-align: justify;
-    text-justify: inter-word;
-    margin: 0% 35% 0% 35%;
+//     text-align: justify;
+//     text-justify: inter-word;
+//     // margin: 0% 35% 0% 35%;
 
-}
+// }
 
-@media only screen and (max-width: 600px) {
-    .content {
-        margin: 0px;
-    }
-}
+
+* {
+    box-sizing: border-box;
+  }
+  
+  .column {
+    float: left;
+    width: 25.33%;
+    padding: 5px;
+  }
+  
+  /* Clearfix (clear floats) */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+
+
+
+// @media only screen and (max-width: 600px) {
+//     .content {
+//         margin: 0px;
+//     }
+// }
